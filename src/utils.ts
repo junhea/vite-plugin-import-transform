@@ -18,9 +18,14 @@ export const selectProperty =
 export const filterByType =
   (specifier: ImportSpecifier) => (transform: ImportTransform) => {
     if (Array.isArray(transform.find)) {
-      return transform.find.some(({ type }) => type === specifier.type)
+      return transform.find.some(
+        ({ type }) => type === undefined || type === specifier.type,
+      )
     }
-    return transform.find.type === specifier.type
+    return (
+      transform.find.type === undefined ||
+      transform.find.type === specifier.type
+    )
   }
 
 export const filterBySource = (
