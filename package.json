@@ -1,0 +1,38 @@
+{
+  "name": "vite-plugin-import-transform",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "node ./scripts/postbuild.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./index.d.ts",
+  "module": "./index.js",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./index.js"
+  },
+  "author": "Junhea Hong",
+  "homepage": "https://github.com/junhea/vite-plugin-import-transform#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junhea/vite-plugin-import-transform.git"
+  },
+  "license": "MIT",
+  "description": "vite plugin to transform import declarations",
+  "devDependencies": {
+    "@types/estree": "^1.0.6",
+    "@types/node": "^22.10.3",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "rollup": "^4.29.1",
+    "vite": "^6.0.6"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "useTabs": false
+  }
+}

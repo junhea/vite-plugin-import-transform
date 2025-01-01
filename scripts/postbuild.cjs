@@ -1,0 +1,5 @@
+const fs = require("fs")
+fs.copyFileSync("./src/types.d.ts", "./dist/types.d.ts")
+fs.copyFileSync("./package.json", "./dist/package.json")
+fs.copyFileSync("./README.md", "./dist/README.md")
+fs.copyFileSync("./LICENSE", "./dist/LICENSE")
