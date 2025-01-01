@@ -1,4 +1,8 @@
-import type { ImportSource, ImportSpecifier, ImportTransform } from "./types"
+import type {
+  ImportSource,
+  ImportSpecifier,
+  ImportTransform,
+} from "./types.d.ts"
 import type { ResolvedId } from "rollup"
 
 export const filterNotNull = <T>(val: T | undefined | null): val is T =>

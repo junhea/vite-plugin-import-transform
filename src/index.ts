@@ -1,17 +1,17 @@
-import type { Plugin, PluginContext, ProgramNode, ResolvedId } from "rollup"
+import type { Plugin, PluginContext, ProgramNode } from "rollup"
 import type {
   ImportSpecifier,
   ImportTransform,
   ImportTransformPluginOptions,
   UnpackArray,
-} from "./types"
+} from "./types.d.ts"
 import type { ImportDeclaration, Program, SimpleLiteral } from "estree"
 import {
   filterBySource,
   filterByType,
   filterString,
   selectProperty,
-} from "./utils"
+} from "./utils.js"
 import { createFilter } from "vite"
 
 class ImportTransformer {
